@@ -33,7 +33,7 @@ const aboutContent = [
 
 export default function About({ version }: AboutProps) {
   const content = aboutContent[version - 1];
-  const renderAboutVersion4 = () => (
+  const renderAboutVersion1 = () => (
     <section className="py-16 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2 
@@ -147,7 +147,7 @@ export default function About({ version }: AboutProps) {
       </div>
     </section>
   );
-  const renderAboutVersion1 = () => (
+  const renderAboutVersion4 = () => (
     <section className="py-16 bg-gray-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2 
