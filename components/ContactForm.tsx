@@ -147,7 +147,7 @@ export default function ContactForm({ version }: ContactFormProps) {
     setFormData({});
   };
 
-  const renderContactFormVersion1 = () => (
+  const renderContactFormVersion2 = () => (
     <section id="contact" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2
@@ -253,7 +253,7 @@ export default function ContactForm({ version }: ContactFormProps) {
     </section>
   );
 
-  const renderContactFormVersion2 = () => (
+  const renderContactFormVersion1 = () => (
     <section
       id="contact"
       className="py-16 bg-gradient-to-br from-blue-500 to-purple-600 text-white"

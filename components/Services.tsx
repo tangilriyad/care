@@ -99,7 +99,7 @@ const allServices = [
 export default function Services({ version }: ServicesProps) {
   const services = allServices[version - 1];
 
-  const renderServicesVersion1 = () => (
+  const renderServicesVersion3 = () => (
     <section className="py-16 bg-gray-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2 
@@ -173,7 +173,7 @@ export default function Services({ version }: ServicesProps) {
     </section>
   );
 
-  const renderServicesVersion3 = () => (
+  const renderServicesVersion1 = () => (
     <section className="py-16 bg-gradient-to-br from-blue-600 to-purple-600 text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2 

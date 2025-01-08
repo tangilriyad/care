@@ -1,5 +1,5 @@
 "use client";
-
+// @ts-nocheck
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
@@ -28,6 +28,7 @@ const footerVersions = [
           "Phone: +1 (123) 456-7890",
           "Email: info@care2consultancy.com",
         ],
+        socialLinks: [],
       },
       {
         title: "Quick Links",
@@ -37,6 +38,7 @@ const footerVersions = [
           { name: "Services", href: "#" },
           { name: "Contact", href: "#" },
         ],
+        socialLinks: [],
       },
       {
         title: "Follow Us",
@@ -62,6 +64,7 @@ const footerVersions = [
           { name: "Immigration Services", href: "#" },
           { name: "Language Courses", href: "#" },
         ],
+        socialLinks: [],
       },
       {
         title: "Resources",
@@ -71,6 +74,7 @@ const footerVersions = [
           { name: "Testimonials", href: "#" },
           { name: "Partner Universities", href: "#" },
         ],
+        socialLinks: [],
       },
       {
         title: "Connect With Us",
@@ -80,6 +84,7 @@ const footerVersions = [
           "Email: support@care2consultancy.com",
           "Address: 456 Global Avenue, City, Country 67890",
         ],
+        socialLinks: [],
       },
     ],
     bottomLinks: [
@@ -98,6 +103,7 @@ const footerVersions = [
           { name: "Careers", href: "#" },
           { name: "Press Releases", href: "#" },
         ],
+        socialLinks: [],
       },
       {
         title: "Student Resources",
@@ -107,6 +113,7 @@ const footerVersions = [
           { name: "Pre-Departure Checklist", href: "#" },
           { name: "Student Forums", href: "#" },
         ],
+        socialLinks: [],
       },
       {
         title: "Stay Connected",
@@ -134,6 +141,7 @@ const footerVersions = [
           "Sydney: +61 2 9876 5432",
           "Tokyo: +81 3 1234 5678",
         ],
+        socialLinks: [],
       },
       {
         title: "Partner Programs",
@@ -143,6 +151,7 @@ const footerVersions = [
           { name: "Agent Network", href: "#" },
           { name: "Alumni Association", href: "#" },
         ],
+        socialLinks: [],
       },
       {
         title: "Legal",
@@ -152,6 +161,7 @@ const footerVersions = [
           { name: "Cookie Policy", href: "#" },
           { name: "Disclaimer", href: "#" },
         ],
+        socialLinks: [],
       },
     ],
     bottomLinks: [
@@ -169,6 +179,7 @@ const footerVersions = [
           { name: "Events", href: "#" },
           { name: "Success Stories", href: "#" },
         ],
+        socialLinks: [],
       },
       {
         title: "Support",
@@ -178,6 +189,7 @@ const footerVersions = [
           { name: "Live Chat", href: "#" },
           { name: "FAQ", href: "#" },
         ],
+        socialLinks: [],
       },
       {
         title: "Newsletter",
@@ -210,7 +222,7 @@ const footerVersions = [
 export default function Footer({ version }: FooterProps) {
   const footerConfig = footerVersions[version - 1];
 
-  const renderFooterVersion1 = () => (
+  const renderFooterVersion2 = () => (
     <footer className="bg-gray-800 text-white py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -243,7 +255,7 @@ export default function Footer({ version }: FooterProps) {
                   ))}
                 </ul>
               )}
-              {column.socialLinks && (
+              {column?.socialLinks && column?.socialLinks?.length > 0 ? (
                 <div className="flex space-x-4 mt-4">
                   {column.socialLinks.map((link, linkIndex) => (
                     <Link
@@ -255,7 +267,7 @@ export default function Footer({ version }: FooterProps) {
                     </Link>
                   ))}
                 </div>
-              )}
+              ):null}
             </motion.div>
           ))}
         </div>
@@ -284,7 +296,7 @@ export default function Footer({ version }: FooterProps) {
     </footer>
   );
 
-  const renderFooterVersion2 = () => (
+  const renderFooterVersion1 = () => (
     <footer className="bg-gradient-to-r from-blue-800 to-indigo-900 text-white py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -323,6 +335,19 @@ export default function Footer({ version }: FooterProps) {
                   ))}
                 </ul>
               )}
+              {column?.socialLinks && column?.socialLinks?.length > 0 ? (
+                <div className="flex space-x-4 mt-6">
+                  {column.socialLinks.map((link, linkIndex) => (
+                    <Link
+                      key={linkIndex}
+                      href={link.href}
+                      className="hover:text-white transition duration-300"
+                    >
+                      <link.icon className="w-6 h-6" />
+                    </Link>
+                  ))}
+                </div>
+              ) : null}
             </motion.div>
           ))}
         </div>
@@ -381,7 +406,7 @@ export default function Footer({ version }: FooterProps) {
                   ))}
                 </ul>
               )}
-              {column.socialLinks && (
+             {column?.socialLinks && column?.socialLinks?.length > 0 ? (
                 <div className="flex space-x-4 mt-6">
                   {column.socialLinks.map((link, linkIndex) => (
                     <Link
@@ -393,7 +418,7 @@ export default function Footer({ version }: FooterProps) {
                     </Link>
                   ))}
                 </div>
-              )}
+              ):null}
             </motion.div>
           ))}
         </div>

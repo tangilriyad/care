@@ -54,7 +54,7 @@ const allReasons = [
 export default function WhyChooseUs({ version }: WhyChooseUsProps) {
   const reasons = allReasons[version - 1];
 
-  const renderWhyChooseUsVersion1 = () => (
+  const renderWhyChooseUsVersion3 = () => (
     <section className="py-16 bg-gray-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2 
@@ -112,7 +112,7 @@ export default function WhyChooseUs({ version }: WhyChooseUsProps) {
     </section>
   );
 
-  const renderWhyChooseUsVersion3 = () => (
+  const renderWhyChooseUsVersion5 = () => (
     <section className="py-16 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2 
@@ -172,7 +172,7 @@ export default function WhyChooseUs({ version }: WhyChooseUsProps) {
     </section>
   );
 
-  const renderWhyChooseUsVersion5 = () => (
+  const renderWhyChooseUsVersion1 = () => (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2 

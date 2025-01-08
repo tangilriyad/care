@@ -33,66 +33,7 @@ const aboutContent = [
 
 export default function About({ version }: AboutProps) {
   const content = aboutContent[version - 1];
-
-  const renderAboutVersion1 = () => (
-    <section className="py-16 bg-gray-100">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.h2 
-          className="text-3xl font-bold text-center mb-8"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          {content.title}
-        </motion.h2>
-        <motion.p 
-          className="text-lg text-gray-700 max-w-3xl mx-auto text-center"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          {content.description}
-        </motion.p>
-      </div>
-    </section>
-  );
-
-  const renderAboutVersion2 = () => (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <h2 className="text-3xl font-bold mb-6">{content.title}</h2>
-            <p className="text-lg text-gray-700">{content.description}</p>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="grid grid-cols-2 gap-4"
-          >
-            {[
-              { icon: Users, text: "Expert Team" },
-              { icon: Globe, text: "Global Reach" },
-              { icon: Award, text: "Proven Success" },
-              { icon: Briefcase, text: "Career Support" }
-            ].map((item, index) => (
-              <div key={index} className="bg-gray-100 p-6 rounded-lg text-center">
-                <item.icon className="w-12 h-12 mx-auto mb-4 text-blue-600" />
-                <p className="font-semibold">{item.text}</p>
-              </div>
-            ))}
-          </motion.div>
-        </div>
-      </div>
-    </section>
-  );
-
-  const renderAboutVersion3 = () => (
+  const renderAboutVersion4 = () => (
     <section className="py-16 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2 
@@ -146,8 +87,67 @@ export default function About({ version }: AboutProps) {
       </div>
     </section>
   );
+ 
 
-  const renderAboutVersion4 = () => (
+  const renderAboutVersion2 = () => (
+    <section className="py-16 bg-white">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-3xl font-bold mb-6">{content.title}</h2>
+            <p className="text-lg text-gray-700">{content.description}</p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="grid grid-cols-2 gap-4"
+          >
+            {[
+              { icon: Users, text: "Expert Team" },
+              { icon: Globe, text: "Global Reach" },
+              { icon: Award, text: "Proven Success" },
+              { icon: Briefcase, text: "Career Support" }
+            ].map((item, index) => (
+              <div key={index} className="bg-gray-100 p-6 rounded-lg text-center">
+                <item.icon className="w-12 h-12 mx-auto mb-4 text-blue-600" />
+                <p className="font-semibold">{item.text}</p>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+
+ 
+  const renderAboutVersion3 = () => (
+    <section className="py-16 bg-gray-100">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.h2 
+          className="text-3xl font-bold text-center mb-8"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          {content.title}
+        </motion.h2>
+        <motion.p 
+          className="text-lg text-gray-700 max-w-3xl mx-auto text-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          {content.description}
+        </motion.p>
+      </div>
+    </section>
+  );
+  const renderAboutVersion1 = () => (
     <section className="py-16 bg-gray-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2 

@@ -10,10 +10,10 @@ interface PaginationProps {
 
 const Pagination: React.FC<PaginationProps> = ({ currentPage, setCurrentPage }) => {
   return (
-    <div className="relative">
+    <div className="relative ">
 
    
-    <nav className="flex justify-center items-center space-x-2 my-2" aria-label="Pagination">
+    <nav  className="flex justify-center items-center space-x-2 my-2 z-10 lg:left-[45%] left-[15%] md:left-[35%]   absolute" aria-label="Pagination">
       {[1, 2, 3, 4, 5].map((page) => (
         <motion.button
           key={page}
