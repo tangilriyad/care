@@ -92,7 +92,7 @@ export default function WhyChooseUs({ version }: WhyChooseUsProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Why We 're Your Best Choice
+          Why We are Your Best Choice
         </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {reasons.map((reason, index) => (

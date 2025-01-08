@@ -1,9 +1,17 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-import { Facebook, Twitter, Linkedin, Instagram, Youtube, Mail,  MapPin } from 'lucide-react'
-import { Fragment } from 'react'
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Youtube,
+  Mail,
+  MapPin,
+} from "lucide-react";
+import { Fragment } from "react";
 
 interface FooterProps {
   version: number;
@@ -18,8 +26,8 @@ const footerVersions = [
           "123 Consultation Street",
           "City, Country 12345",
           "Phone: +1 (123) 456-7890",
-          "Email: info@care2consultancy.com"
-        ]
+          "Email: info@care2consultancy.com",
+        ],
       },
       {
         title: "Quick Links",
@@ -27,22 +35,22 @@ const footerVersions = [
           { name: "Home", href: "#" },
           { name: "About Us", href: "#" },
           { name: "Services", href: "#" },
-          { name: "Contact", href: "#" }
-        ]
+          { name: "Contact", href: "#" },
+        ],
       },
       {
         title: "Follow Us",
         socialLinks: [
           { name: "Facebook", icon: Facebook, href: "#" },
           { name: "Twitter", icon: Twitter, href: "#" },
-          { name: "LinkedIn", icon: Linkedin, href: "#" }
-        ]
-      }
+          { name: "LinkedIn", icon: Linkedin, href: "#" },
+        ],
+      },
     ],
     bottomLinks: [
       { name: "Privacy Policy", href: "#" },
-      { name: "Terms of Service", href: "#" }
-    ]
+      { name: "Terms of Service", href: "#" },
+    ],
   },
   {
     columns: [
@@ -52,8 +60,8 @@ const footerVersions = [
           { name: "Study Abroad", href: "#" },
           { name: "Work Abroad", href: "#" },
           { name: "Immigration Services", href: "#" },
-          { name: "Language Courses", href: "#" }
-        ]
+          { name: "Language Courses", href: "#" },
+        ],
       },
       {
         title: "Resources",
@@ -61,8 +69,8 @@ const footerVersions = [
           { name: "Blog", href: "#" },
           { name: "FAQs", href: "#" },
           { name: "Testimonials", href: "#" },
-          { name: "Partner Universities", href: "#" }
-        ]
+          { name: "Partner Universities", href: "#" },
+        ],
       },
       {
         title: "Connect With Us",
@@ -70,15 +78,15 @@ const footerVersions = [
           "Main Office: +1 (123) 456-7890",
           "Support: +1 (123) 456-7891",
           "Email: support@care2consultancy.com",
-          "Address: 456 Global Avenue, City, Country 67890"
-        ]
-      }
+          "Address: 456 Global Avenue, City, Country 67890",
+        ],
+      },
     ],
     bottomLinks: [
       { name: "Sitemap", href: "#" },
       { name: "Accessibility", href: "#" },
-      { name: "Cookie Policy", href: "#" }
-    ]
+      { name: "Cookie Policy", href: "#" },
+    ],
   },
   {
     columns: [
@@ -88,8 +96,8 @@ const footerVersions = [
           { name: "Our Story", href: "#" },
           { name: "Team", href: "#" },
           { name: "Careers", href: "#" },
-          { name: "Press Releases", href: "#" }
-        ]
+          { name: "Press Releases", href: "#" },
+        ],
       },
       {
         title: "Student Resources",
@@ -97,8 +105,8 @@ const footerVersions = [
           { name: "Scholarship Guide", href: "#" },
           { name: "Visa Information", href: "#" },
           { name: "Pre-Departure Checklist", href: "#" },
-          { name: "Student Forums", href: "#" }
-        ]
+          { name: "Student Forums", href: "#" },
+        ],
       },
       {
         title: "Stay Connected",
@@ -107,14 +115,14 @@ const footerVersions = [
           { name: "Twitter", icon: Twitter, href: "#" },
           { name: "LinkedIn", icon: Linkedin, href: "#" },
           { name: "Instagram", icon: Instagram, href: "#" },
-          { name: "YouTube", icon: Youtube, href: "#" }
-        ]
-      }
+          { name: "YouTube", icon: Youtube, href: "#" },
+        ],
+      },
     ],
     bottomLinks: [
       { name: "Ethics Policy", href: "#" },
-      { name: "Diversity Statement", href: "#" }
-    ]
+      { name: "Diversity Statement", href: "#" },
+    ],
   },
   {
     columns: [
@@ -124,8 +132,8 @@ const footerVersions = [
           "New York: +1 (123) 456-7892",
           "London: +44 20 1234 5678",
           "Sydney: +61 2 9876 5432",
-          "Tokyo: +81 3 1234 5678"
-        ]
+          "Tokyo: +81 3 1234 5678",
+        ],
       },
       {
         title: "Partner Programs",
@@ -133,8 +141,8 @@ const footerVersions = [
           { name: "University Partnerships", href: "#" },
           { name: "Corporate Collaborations", href: "#" },
           { name: "Agent Network", href: "#" },
-          { name: "Alumni Association", href: "#" }
-        ]
+          { name: "Alumni Association", href: "#" },
+        ],
       },
       {
         title: "Legal",
@@ -142,14 +150,14 @@ const footerVersions = [
           { name: "Terms of Use", href: "#" },
           { name: "Privacy Policy", href: "#" },
           { name: "Cookie Policy", href: "#" },
-          { name: "Disclaimer", href: "#" }
-        ]
-      }
+          { name: "Disclaimer", href: "#" },
+        ],
+      },
     ],
     bottomLinks: [
       { name: "Feedback", href: "#" },
-      { name: "Report an Issue", href: "#" }
-    ]
+      { name: "Report an Issue", href: "#" },
+    ],
   },
   {
     columns: [
@@ -159,8 +167,8 @@ const footerVersions = [
           { name: "Destinations", href: "#" },
           { name: "Programs", href: "#" },
           { name: "Events", href: "#" },
-          { name: "Success Stories", href: "#" }
-        ]
+          { name: "Success Stories", href: "#" },
+        ],
       },
       {
         title: "Support",
@@ -168,26 +176,35 @@ const footerVersions = [
           { name: "Help Center", href: "#" },
           { name: "Contact Support", href: "#" },
           { name: "Live Chat", href: "#" },
-          { name: "FAQ", href: "#" }
-        ]
+          { name: "FAQ", href: "#" },
+        ],
       },
       {
         title: "Newsletter",
         content: [
           "Subscribe to our newsletter for the latest updates and exclusive offers.",
           <form key="newsletter" className="mt-2">
-            <input type="email" placeholder="Enter your email" className="w-full p-2 border rounded text-gray-800" />
-            <button type="submit" className="mt-2 w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700 transition duration-300">Subscribe</button>
-          </form>
-        ]
-      }
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="w-full p-2 border rounded text-gray-800"
+            />
+            <button
+              type="submit"
+              className="mt-2 w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700 transition duration-300"
+            >
+              Subscribe
+            </button>
+          </form>,
+        ],
+      },
     ],
     bottomLinks: [
       { name: "Blog", href: "#" },
       { name: "Careers", href: "#" },
-      { name: "Press Kit", href: "#" }
-    ]
-  }
+      { name: "Press Kit", href: "#" },
+    ],
+  },
 ];
 
 export default function Footer({ version }: FooterProps) {
@@ -216,7 +233,10 @@ export default function Footer({ version }: FooterProps) {
                 <ul className="space-y-2">
                   {column.links.map((link, linkIndex) => (
                     <li key={linkIndex}>
-                      <Link href={link.href} className="hover:text-blue-400 transition duration-300">
+                      <Link
+                        href={link.href}
+                        className="hover:text-blue-400 transition duration-300"
+                      >
                         {link.name}
                       </Link>
                     </li>
@@ -226,7 +246,11 @@ export default function Footer({ version }: FooterProps) {
               {column.socialLinks && (
                 <div className="flex space-x-4 mt-4">
                   {column.socialLinks.map((link, linkIndex) => (
-                    <Link key={linkIndex} href={link.href} className="hover:text-blue-400 transition duration-300">
+                    <Link
+                      key={linkIndex}
+                      href={link.href}
+                      className="hover:text-blue-400 transition duration-300"
+                    >
                       <link.icon className="w-6 h-6" />
                     </Link>
                   ))}
@@ -246,7 +270,10 @@ export default function Footer({ version }: FooterProps) {
             {footerConfig.bottomLinks.map((link, index) => (
               <Fragment key={index}>
                 {index > 0 && <span className="mx-2">|</span>}
-                <Link href={link.href} className="hover:text-blue-400 transition duration-300">
+                <Link
+                  href={link.href}
+                  className="hover:text-blue-400 transition duration-300"
+                >
                   {link.name}
                 </Link>
               </Fragment>
@@ -268,7 +295,9 @@ export default function Footer({ version }: FooterProps) {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <h3 className="text-xl font-bold mb-6 border-b border-blue-400 pb-2">{column.title}</h3>
+              <h3 className="text-xl font-bold mb-6 border-b border-blue-400 pb-2">
+                {column.title}
+              </h3>
               {column.content && (
                 <ul className="space-y-3">
                   {column.content.map((item, itemIndex) => (
@@ -283,7 +312,10 @@ export default function Footer({ version }: FooterProps) {
                 <ul className="space-y-3">
                   {column.links.map((link, linkIndex) => (
                     <li key={linkIndex}>
-                      <Link href={link.href} className="hover:text-blue-300 transition duration-300 flex items-center">
+                      <Link
+                        href={link.href}
+                        className="hover:text-blue-300 transition duration-300 flex items-center"
+                      >
                         <span className="mr-2">→</span>
                         {link.name}
                       </Link>
@@ -300,10 +332,16 @@ export default function Footer({ version }: FooterProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
-          <p className="text-blue-200">&copy; 2023 Care2 Training Consultancy. All rights reserved.</p>
+          <p className="text-blue-200">
+            &copy; 2023 Care2 Training Consultancy. All rights reserved.
+          </p>
           <div className="mt-4 flex justify-center space-x-4">
             {footerConfig.bottomLinks.map((link, index) => (
-              <Link key={index} href={link.href} className="text-sm hover:text-blue-300 transition duration-300">
+              <Link
+                key={index}
+                href={link.href}
+                className="text-sm hover:text-blue-300 transition duration-300"
+              >
                 {link.name}
               </Link>
             ))}
@@ -325,12 +363,17 @@ export default function Footer({ version }: FooterProps) {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-gray-800 p-6 rounded-lg shadow-lg"
             >
-              <h3 className="text-xl font-bold mb-6 text-white">{column.title}</h3>
+              <h3 className="text-xl font-bold mb-6 text-white">
+                {column.title}
+              </h3>
               {column.links && (
                 <ul className="space-y-3">
                   {column.links.map((link, linkIndex) => (
                     <li key={linkIndex}>
-                      <Link href={link.href} className="hover:text-white transition duration-300 flex items-center">
+                      <Link
+                        href={link.href}
+                        className="hover:text-white transition duration-300 flex items-center"
+                      >
                         <span className="mr-2 text-blue-400">•</span>
                         {link.name}
                       </Link>
@@ -341,7 +384,11 @@ export default function Footer({ version }: FooterProps) {
               {column.socialLinks && (
                 <div className="flex space-x-4 mt-6">
                   {column.socialLinks.map((link, linkIndex) => (
-                    <Link key={linkIndex} href={link.href} className="hover:text-white transition duration-300">
+                    <Link
+                      key={linkIndex}
+                      href={link.href}
+                      className="hover:text-white transition duration-300"
+                    >
                       <link.icon className="w-6 h-6" />
                     </Link>
                   ))}
@@ -356,10 +403,16 @@ export default function Footer({ version }: FooterProps) {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
-          <p className="text-gray-500">&copy; 2023 Care2 Training Consultancy. All rights reserved.</p>
+          <p className="text-gray-500">
+            &copy; 2023 Care2 Training Consultancy. All rights reserved.
+          </p>
           <div className="mt-4 flex justify-center space-x-4">
             {footerConfig.bottomLinks.map((link, index) => (
-              <Link key={index} href={link.href} className="text-sm hover:text-white transition duration-300">
+              <Link
+                key={index}
+                href={link.href}
+                className="text-sm hover:text-white transition duration-300"
+              >
                 {link.name}
               </Link>
             ))}
@@ -380,7 +433,9 @@ export default function Footer({ version }: FooterProps) {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <h3 className="text-xl font-bold mb-6 text-blue-600">{column.title}</h3>
+              <h3 className="text-xl font-bold mb-6 text-blue-600">
+                {column.title}
+              </h3>
               {column.content && (
                 <ul className="space-y-3">
                   {column.content.map((item, itemIndex) => (
@@ -395,7 +450,10 @@ export default function Footer({ version }: FooterProps) {
                 <ul className="space-y-3">
                   {column.links.map((link, linkIndex) => (
                     <li key={linkIndex}>
-                      <Link href={link.href} className="hover:text-blue-600 transition duration-300">
+                      <Link
+                        href={link.href}
+                        className="hover:text-blue-600 transition duration-300"
+                      >
                         {link.name}
                       </Link>
                     </li>
@@ -411,10 +469,16 @@ export default function Footer({ version }: FooterProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
-          <p className="text-gray-600">&copy; 2023 Care2 Training Consultancy. All rights reserved.</p>
+          <p className="text-gray-600">
+            &copy; 2023 Care2 Training Consultancy. All rights reserved.
+          </p>
           <div className="mt-4 flex justify-center space-x-4">
             {footerConfig.bottomLinks.map((link, index) => (
-              <Link key={index} href={link.href} className="text-sm hover:text-blue-600 transition duration-300">
+              <Link
+                key={index}
+                href={link.href}
+                className="text-sm hover:text-blue-600 transition duration-300"
+              >
                 {link.name}
               </Link>
             ))}
@@ -435,7 +499,9 @@ export default function Footer({ version }: FooterProps) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <h3 className="text-xl font-bold mb-6 text-gray-900">{column.title}</h3>
+              <h3 className="text-xl font-bold mb-6 text-gray-900">
+                {column.title}
+              </h3>
               {column.content && (
                 <ul className="space-y-3">
                   {column.content.map((item, itemIndex) => (
@@ -447,7 +513,10 @@ export default function Footer({ version }: FooterProps) {
                 <ul className="space-y-3">
                   {column.links.map((link, linkIndex) => (
                     <li key={linkIndex}>
-                      <Link href={link.href} className="hover:text-blue-600 transition duration-300">
+                      <Link
+                        href={link.href}
+                        className="hover:text-blue-600 transition duration-300"
+                      >
                         {link.name}
                       </Link>
                     </li>
@@ -472,10 +541,16 @@ export default function Footer({ version }: FooterProps) {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
-          <p className="text-gray-600">&copy; 2023 Care2 Training Consultancy. All rights reserved.</p>
+          <p className="text-gray-600">
+            &copy; 2023 Care2 Training Consultancy. All rights reserved.
+          </p>
           <div className="mt-4 flex justify-center space-x-4">
             {footerConfig.bottomLinks.map((link, index) => (
-              <Link key={index} href={link.href} className="text-sm hover:text-blue-600 transition duration-300">
+              <Link
+                key={index}
+                href={link.href}
+                className="text-sm hover:text-blue-600 transition duration-300"
+              >
                 {link.name}
               </Link>
             ))}
@@ -486,7 +561,7 @@ export default function Footer({ version }: FooterProps) {
   );
 
   const renderFooterVersion = () => {
-    switch(version) {
+    switch (version) {
       case 1:
         return renderFooterVersion1();
       case 2:
@@ -500,7 +575,7 @@ export default function Footer({ version }: FooterProps) {
       default:
         return renderFooterVersion1();
     }
-  }
+  };
 
   return (
     <motion.footer
@@ -510,6 +585,5 @@ export default function Footer({ version }: FooterProps) {
     >
       {renderFooterVersion()}
     </motion.footer>
-  )
+  );
 }
-
